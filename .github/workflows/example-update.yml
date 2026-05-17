@@ -46,6 +46,12 @@ jobs:
           test -n "$CLOUDFLARE_API_TOKEN" || (echo "Missing CLOUDFLARE_API_TOKEN" && exit 1)
           echo "Secrets are present"
 
+      - name: Verify Cloudflare token
+        run: |
+          curl -sS \
+            -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            https://api.cloudflare.com/client/v4/user/tokens/verify
+
       - name: Update Cloudflare lists
         run: cf-zt-oisd-sync update --yes --json
 
