@@ -1,94 +1,95 @@
 # cf-zt-oisd-sync
 
-Эта программа скачивает официальный список `OISD small` и добавляет домены из него в Cloudflare Zero Trust Gateway как reusable DOMAIN lists. Затем она создаёт DNS Gateway rule, которое блокирует эти домены.
+This program downloads the official `OISD small` list and adds its domains to Cloudflare Zero Trust Gateway as reusable DOMAIN lists. It then creates a DNS Gateway rule that blocks those domains.
 
-Программа не изменяет существующие Cloudflare policies, если они не были созданы этой программой.
+The program does not modify existing Cloudflare policies unless they were created by this program.
 
-## Самый короткий путь
+## Quickest path
 
-Если хочется, чтобы оно "просто работало", общий порядок такой:
+If you want it to "just work", the overall flow is:
 
-1. Откройте папку проекта в терминале.
-2. Установите Python и зависимости.
-3. Запустите `python run.py`.
-4. Выберите пункт `1`, чтобы создать `.env`.
-5. Выберите пункт `2`, чтобы проверить подключение.
-6. Выберите пункт `3`, чтобы посмотреть план без изменений.
-7. Если план выглядит нормально, выберите пункт `4`.
-8. Для последующих обновлений снова запускайте `python run.py` и выбирайте пункт `4`.
+1. Open the project folder in a terminal.
+2. Install Python and the dependencies.
+3. Run `python run.py`.
+4. Choose option `1` to create `.env`.
+5. Choose option `2` to check the connection.
+6. Choose option `3` to review the plan without making changes.
+7. If the plan looks good, choose option `4`.
+8. For later updates, run `python run.py` again and choose option `4`.
 
-Команды ниже можно выполнять по порядку.
+You can run the commands below in order.
 
-## Установка зависимостей
+## Install dependencies
 
-В папке проекта выполните:
+In the project folder, run:
 
 ```bash
 python3 -m pip install -e .
 ```
 
-В Windows PowerShell обычно можно так:
+In Windows PowerShell, this usually works:
 
 ```powershell
 python -m pip install -e .
 ```
 
-## Самый простой запуск через меню
+## Easiest launch through the menu
 
-После установки зависимостей запустите:
+After installing the dependencies, run:
 
 ```bash
 python run.py
 ```
 
-В WSL/Ubuntu иногда команда называется `python3`:
+In WSL/Ubuntu, the command may be named `python3`:
 
 ```bash
 python3 run.py
 ```
 
-Вы увидите меню:
+You will see a menu:
 
 ```text
-1. Первичная настройка (.env)
-2. Проверить подключение Cloudflare и OISD
-3. Dry-run: показать план без изменений
-4. Создать или обновить списки и правило блокировки
-5. Показать статус
-6. Удалить созданные объекты
-7. Диагностика проблем
-0. Выход
+1. Initial setup (.env)
+2. Check Cloudflare and OISD connection
+3. Dry-run: show plan without changes
+4. Create or update lists and blocking rule
+5. Show status
+6. Delete created objects
+7. Diagnose problems
+8. Language / Язык
+0. Exit
 ```
 
-Введите номер пункта и нажмите `Enter`. Например, для первого запуска обычно идут так:
+Enter the option number and press `Enter`. For example, the usual first-run sequence is:
 
 ```text
 1 -> 2 -> 3 -> 4 -> 5
 ```
 
-То есть: настроить, проверить, посмотреть план, применить, проверить статус.
+That means: configure, check, review the plan, apply it, then check the status.
 
-Если программа установлена как CLI-команда, это же меню можно открыть так:
+If the program is installed as a CLI command, you can open the same menu with:
 
 ```bash
 cf-zt-oisd-sync menu
 ```
 
-## Какую папку открыть
+## Which folder to open
 
-Откройте именно папку проекта:
+Open the project folder itself:
 
 ```text
 C:\Users\MAESTRO\Downloads\cloudflare zero trust adblock updater
 ```
 
-Если вы работаете в WSL/Linux, тот же путь выглядит так:
+If you work in WSL/Linux, the same path looks like this:
 
 ```text
 /mnt/c/Users/MAESTRO/Downloads/cloudflare zero trust adblock updater
 ```
 
-В этой папке должны быть файлы:
+This folder should contain:
 
 ```text
 README.md
@@ -98,67 +99,67 @@ cf_zt_oisd_sync/
 tests/
 ```
 
-## Чем открыть папку
+## How to open the folder
 
-Подойдут любые варианты:
+Any of these are fine:
 
 - Windows Terminal;
 - PowerShell;
 - Ubuntu/WSL terminal;
-- VS Code: `File -> Open Folder`, затем `Terminal -> New Terminal`.
+- VS Code: `File -> Open Folder`, then `Terminal -> New Terminal`.
 
-Если вы не уверены, проще всего открыть VS Code, выбрать папку проекта и открыть встроенный терминал.
+If you are not sure, the easiest option is to open VS Code, choose the project folder, and open the built-in terminal.
 
-## Как перейти в папку проекта
+## How to enter the project folder
 
-В WSL/Ubuntu:
+In WSL/Ubuntu:
 
 ```bash
 cd "/mnt/c/Users/MAESTRO/Downloads/cloudflare zero trust adblock updater"
 ```
 
-В PowerShell:
+In PowerShell:
 
 ```powershell
 cd "C:\Users\MAESTRO\Downloads\cloudflare zero trust adblock updater"
 ```
 
-## Установка Python
+## Install Python
 
-Проверьте, есть ли Python:
+Check whether Python is installed:
 
 ```bash
 python3 --version
 ```
 
-Или в Windows PowerShell:
+Or in Windows PowerShell:
 
 ```powershell
 py --version
 ```
 
-Нужен Python 3.11 или новее.
+Python 3.11 or newer is required.
 
-Если Python не установлен, установите его с официального сайта:
+If Python is not installed, install it from the official website:
 
 ```text
 https://www.python.org/downloads/
 ```
 
-На Windows во время установки включите галочку `Add python.exe to PATH`.
+On Windows, enable the `Add python.exe to PATH` checkbox during installation.
 
-## Установка зависимостей
+## Install dependencies
 
-### Вариант A: WSL/Ubuntu
+### Option A: WSL/Ubuntu
 
-Сначала установите `pip` и модуль виртуального окружения:
+First install `pip` and the virtual environment module:
 
 ```bash
 sudo apt-get update
 sudo apt-get install -y python3-pip python3-venv
 ```
 
-Затем в папке проекта выполните:
+Then run this in the project folder:
 
 ```bash
 python3 -m venv .venv
@@ -166,11 +167,11 @@ source .venv/bin/activate
 python3 -m pip install -e '.[dev]'
 ```
 
-После `source .venv/bin/activate` в начале строки терминала обычно появляется `(.venv)`. Это нормально: значит, включено отдельное окружение Python для этого проекта.
+After `source .venv/bin/activate`, `(.venv)` usually appears at the start of the terminal prompt. This is normal: it means a separate Python environment for this project is active.
 
-### Вариант B: Windows PowerShell
+### Option B: Windows PowerShell
 
-В папке проекта выполните:
+Run this in the project folder:
 
 ```powershell
 py -m venv .venv
@@ -178,166 +179,166 @@ py -m venv .venv
 py -m pip install -e ".[dev]"
 ```
 
-Если PowerShell не даёт активировать `.venv`, выполните:
+If PowerShell does not allow `.venv` activation, run:
 
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
-После этого снова:
+Then try again:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
 ```
 
-## Настройка Cloudflare
+## Configure Cloudflare
 
-Программе нужны два значения:
+The program needs two values:
 
 - `CLOUDFLARE_ACCOUNT_ID`;
 - `CLOUDFLARE_API_TOKEN`.
 
-### Где найти Account ID
+### Where to find the Account ID
 
-1. Откройте Cloudflare dashboard.
-2. Выберите нужный account.
-3. Обычно `Account ID` виден в правой панели или в разделе account/profile.
-4. Скопируйте значение целиком.
+1. Open the Cloudflare dashboard.
+2. Select the account you want to use.
+3. `Account ID` is usually visible in the right sidebar or in the account/profile section.
+4. Copy the full value.
 
-### Как создать API token
+### How to create an API token
 
-1. Откройте Cloudflare dashboard.
-2. Перейдите в `My Profile -> API Tokens`.
-3. Нажмите `Create Token`.
-4. Создайте token с правами на Cloudflare Zero Trust Gateway Lists и Gateway Rules.
-5. Скопируйте token сразу после создания.
+1. Open the Cloudflare dashboard.
+2. Go to `My Profile -> API Tokens`.
+3. Click `Create Token`.
+4. Create a token with permissions for Cloudflare Zero Trust Gateway Lists and Gateway Rules.
+5. Copy the token immediately after it is created.
 
-Cloudflare показывает token только один раз. Если вы закрыли страницу и не скопировали token, проще создать новый.
+Cloudflare shows the token only once. If you close the page without copying it, it is usually easier to create a new one.
 
-## Создание `.env`
+## Create `.env`
 
-Самый простой способ:
+The easiest way:
 
 ```bash
 cf-zt-oisd-sync setup
 ```
 
-Программа задаст вопросы:
+The program will ask:
 
 ```text
-Введите Cloudflare Account ID:
-Введите Cloudflare API Token:
-Источник OISD small [https://small.oisd.nl]:
-Префикс списков [oisd-small-auto]:
-Название правила [OISD Small Auto Block]:
-Размер части списка [1000]:
+Enter Cloudflare Account ID:
+Enter Cloudflare API Token:
+OISD small source [https://small.oisd.nl]:
+List prefix [oisd-small-auto]:
+Rule name [OISD Small Auto Block]:
+List chunk size [1000]:
 ```
 
-Для большинства вопросов можно нажимать `Enter` и оставлять значения по умолчанию. Ввести вручную обязательно нужно только `Account ID` и `API Token`.
+For most questions, you can press `Enter` and keep the default values. You only need to enter `Account ID` and `API Token` manually.
 
-После этого в папке появится файл `.env`. Это обычный текстовый файл с настройками. Его можно открыть в VS Code или Блокноте, но не публикуйте его в интернет: внутри находится секретный API token.
+After that, a `.env` file will appear in the folder. This is a regular text file with settings. You can open it in VS Code or Notepad, but do not publish it online: it contains a secret API token.
 
-## Проверка перед запуском
+## Check before running
 
-Запустите:
+Run:
 
 ```bash
 cf-zt-oisd-sync check
 ```
 
-Если всё хорошо, вы увидите строки с `[OK]`.
+If everything is good, you will see lines with `[OK]`.
 
-Если видите ошибку про token или права, проверьте:
+If you see an error about the token or permissions, check:
 
-- правильно ли вставлен `CLOUDFLARE_API_TOKEN`;
-- правильно ли вставлен `CLOUDFLARE_ACCOUNT_ID`;
-- есть ли у token права на Gateway Lists и Gateway Rules.
+- whether `CLOUDFLARE_API_TOKEN` was pasted correctly;
+- whether `CLOUDFLARE_ACCOUNT_ID` was pasted correctly;
+- whether the token has permissions for Gateway Lists and Gateway Rules.
 
-## Безопасный предварительный просмотр
+## Safe preview
 
-Перед реальным созданием объектов выполните:
+Before creating real objects, run:
 
 ```bash
 cf-zt-oisd-sync dry-run
 ```
 
-Эта команда ничего не меняет в Cloudflare. Она только показывает, сколько списков будет создано и какое правило появится.
+This command does not change anything in Cloudflare. It only shows how many lists will be created and which rule will appear.
 
-## Первый реальный запуск
+## First real run
 
-Если `dry-run` выглядит нормально:
+If `dry-run` looks good:
 
 ```bash
 cf-zt-oisd-sync init
 ```
 
-Программа попросит подтверждение. После подтверждения она создаст:
+The program will ask for confirmation. After you confirm, it will create:
 
-- несколько Cloudflare DOMAIN lists;
-- одно DNS Gateway rule;
-- локальный state-файл `.cf-zt-oisd-state.json`.
+- several Cloudflare DOMAIN lists;
+- one DNS Gateway rule;
+- a local state file, `.cf-zt-oisd-state.json`.
 
-Во время создания вы увидите индикаторы прогресса для списков Cloudflare и DNS Gateway rule. Если списков много, это нормально: Cloudflare принимает их по частям.
+During creation, you will see progress indicators for the Cloudflare lists and the DNS Gateway rule. If there are many lists, that is normal: Cloudflare accepts them in chunks.
 
-State-файл нужен программе, чтобы помнить, какие объекты она создала. Его не нужно редактировать руками.
+The state file lets the program remember which objects it created. You do not need to edit it manually.
 
-## Как проверить, что всё работает
+## How to check that everything works
 
-Запустите:
+Run:
 
 ```bash
 cf-zt-oisd-sync status
 ```
 
-Хороший результат выглядит примерно так:
+A good result looks roughly like this:
 
 ```text
-[OK] Локальное состояние совпадает с Cloudflare
+[OK] Local state matches Cloudflare
 ```
 
-Также можно открыть Cloudflare Zero Trust dashboard и проверить Gateway lists/rules вручную.
+You can also open the Cloudflare Zero Trust dashboard and check Gateway lists/rules manually.
 
-## Как обновлять список
+## How to update the list
 
-Обычное обновление:
+Normal update:
 
 ```bash
 cf-zt-oisd-sync update
 ```
 
-Для автоматического запуска без вопросов:
+Automatic update without questions:
 
 ```bash
 cf-zt-oisd-sync update --yes
 ```
 
-При обновлении программа тоже показывает прогресс: отдельно для списков и отдельно для правила блокировки.
+During updates, the program also shows progress: one indicator for the lists and one for the blocking rule.
 
-## Как удалить всё, что создала программа
+## How to delete everything created by the program
 
-Интерактивно:
+Interactively:
 
 ```bash
 cf-zt-oisd-sync delete
 ```
 
-Программа попросит ввести:
+The program will ask you to type:
 
 ```text
 DELETE
 ```
 
-Автоматически, без вопроса:
+Automatically, without a question:
 
 ```bash
 cf-zt-oisd-sync delete --yes
 ```
 
-Удаляются только managed-объекты этой программы: списки с нужным префиксом, объекты из state-файла и объекты с пометкой `Managed by cf-zt-oisd-sync`.
+Only this program's managed objects are deleted: lists with the configured prefix, objects from the state file, and objects marked with `Managed by cf-zt-oisd-sync`.
 
-## Что запускать каждый день
+## What to run every day
 
-Для регулярного обновления нужна команда:
+For regular updates, use:
 
 ```bash
 cf-zt-oisd-sync update --yes
@@ -345,13 +346,13 @@ cf-zt-oisd-sync update --yes
 
 ### Windows Task Scheduler
 
-Команда для планировщика:
+Command for the scheduler:
 
 ```powershell
 python -m cf_zt_oisd_sync.cli update --yes
 ```
 
-Рабочая папка должна быть папкой проекта:
+The working folder must be the project folder:
 
 ```text
 C:\Users\MAESTRO\Downloads\cloudflare zero trust adblock updater
@@ -359,102 +360,102 @@ C:\Users\MAESTRO\Downloads\cloudflare zero trust adblock updater
 
 ### Linux cron
 
-Пример запуска каждый день в 04:00:
+Example for running every day at 04:00:
 
 ```bash
 0 4 * * * cd "/mnt/c/Users/MAESTRO/Downloads/cloudflare zero trust adblock updater" && . .venv/bin/activate && cf-zt-oisd-sync update --yes
 ```
 
-## Частые вопросы
+## FAQ
 
-### Какой файл открыть?
+### Which file should I open?
 
-Для инструкции откройте `README.md`.
+Open `README.md` for instructions.
 
-Для настроек откройте `.env`.
+Open `.env` for settings.
 
-Для просмотра состояния откройте `.cf-zt-oisd-state.json`, но редактировать его обычно не нужно.
+Open `.cf-zt-oisd-state.json` to inspect the state, but you usually do not need to edit it.
 
-### Чем открыть `.env`?
+### How should I open `.env`?
 
-Подойдёт VS Code, Блокнот, Notepad++ или любой текстовый редактор. В VS Code удобнее всего.
+VS Code, Notepad, Notepad++, or any text editor will work. VS Code is usually the most convenient.
 
-### Почему файл `.env` не виден?
+### Why is `.env` not visible?
 
-Файлы, которые начинаются с точки, иногда считаются скрытыми. В VS Code они обычно видны. В Windows Explorer включите показ скрытых файлов.
+Files that start with a dot are sometimes treated as hidden files. They are usually visible in VS Code. In Windows Explorer, enable hidden files.
 
-### Что делать, если команда `cf-zt-oisd-sync` не найдена?
+### What if the `cf-zt-oisd-sync` command is not found?
 
-Скорее всего, не активировано виртуальное окружение.
+Most likely, the virtual environment is not active.
 
-В WSL/Ubuntu:
+In WSL/Ubuntu:
 
 ```bash
 source .venv/bin/activate
 ```
 
-В PowerShell:
+In PowerShell:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
 ```
 
-После этого снова попробуйте:
+Then try again:
 
 ```bash
 cf-zt-oisd-sync --help
 ```
 
-### Что делать, если `python3: No module named pip`?
+### What if I get `python3: No module named pip`?
 
-В WSL/Ubuntu установите `pip`:
+In WSL/Ubuntu, install `pip`:
 
 ```bash
 sudo apt-get update
 sudo apt-get install -y python3-pip python3-venv
 ```
 
-После этого повторите установку зависимостей.
+Then repeat the dependency installation.
 
-### Что делать, если Cloudflare вернул `403 Forbidden`?
+### What if Cloudflare returned `403 Forbidden`?
 
-Это почти всегда означает, что API token не имеет нужных прав. Создайте или обновите token с доступом к Zero Trust Gateway Lists и Gateway Rules.
+This almost always means the API token does not have the required permissions. Create or update a token with access to Zero Trust Gateway Lists and Gateway Rules.
 
-### Что делать, если я боюсь что-то сломать?
+### What if I am afraid of breaking something?
 
-Сначала запустите:
+Start with:
 
 ```bash
 cf-zt-oisd-sync dry-run
 ```
 
-Эта команда ничего не меняет. Она только показывает план.
+This command does not change anything. It only shows the plan.
 
-### Можно ли менять `CHUNK_SIZE`?
+### Can I change `CHUNK_SIZE`?
 
-Обычно оставьте `1000`. Это безопасное значение для Standard/free-подобных планов Cloudflare.
+Usually, leave it at `1000`. This is a safe value for Standard/free-like Cloudflare plans.
 
-### Что такое `state-файл`?
+### What is the state file?
 
-Это файл `.cf-zt-oisd-state.json`. Программа записывает туда ID созданных списков и правила Cloudflare. Благодаря этому она понимает, что обновлять и что удалять.
+It is the `.cf-zt-oisd-state.json` file. The program writes the IDs of the created Cloudflare lists and rule there. That is how it knows what to update and what to delete.
 
-### Можно ли удалить state-файл?
+### Can I delete the state file?
 
-Лучше не удалять. Если он пропал, выполните:
+It is better not to delete it. If it disappears, run:
 
 ```bash
 cf-zt-oisd-sync doctor
 ```
 
-### Как понять, что программа ничего лишнего не удалит?
+### How do I know the program will not delete anything extra?
 
-Команда `delete` ищет только объекты, которые выглядят как созданные этой программой:
+The `delete` command only looks for objects that appear to have been created by this program:
 
-- есть в state-файле;
-- или имеют нужный префикс;
-- или содержат описание `Managed by cf-zt-oisd-sync`.
+- they are listed in the state file;
+- or they have the configured prefix;
+- or their description contains `Managed by cf-zt-oisd-sync`.
 
-## Команды для справки
+## Command reference
 
 ```bash
 cf-zt-oisd-sync --help
@@ -468,9 +469,9 @@ cf-zt-oisd-sync delete
 cf-zt-oisd-sync doctor
 ```
 
-## Проверка для разработчика
+## Developer checks
 
-Если установлены dev-зависимости:
+If dev dependencies are installed:
 
 ```bash
 pytest
