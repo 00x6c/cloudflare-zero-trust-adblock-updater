@@ -4,423 +4,423 @@
   "rule_name": "OISD Small Auto Block",
   "source_url": "https://small.oisd.nl",
   "chunk_size": 1000,
-  "last_sync_at": "2026-06-05T07:07:54Z",
-  "source_hash": "a50cb7972ae733340d9b0c102e8abf8aab2d2410ef914a44c48e62150adda084",
-  "raw_source_hash": "efcf7f1eff0a2e02a8385623f01c668ce5c6e335d1d126f6d1481cad5ca6ee09",
-  "domain_count": 58668,
+  "last_sync_at": "2026-06-06T06:30:19Z",
+  "source_hash": "f4f35a17e95bcdea9de606af6b194f0509b25e36628ee382db8ce1a08532b9a8",
+  "raw_source_hash": "a400ef36d79e3eec77944af0b3d0553121fc2bcb93d200eed5f722f716aa47e9",
+  "domain_count": 58873,
   "chunks": [
     {
       "index": 1,
       "name": "oisd-small-auto-001",
       "cloudflare_list_id": "bdc45839-ac13-494b-b4be-cf38bbbb55a0",
       "item_count": 1000,
-      "chunk_hash": "e0d27bbcb3b25e69c707c986d0f7bd87745f934a711c4202765e5c747920ad0b"
+      "chunk_hash": "5a4df901b8ff37c84be0b6e5ce57d66947809e1588bd37a1b99a23a3619999f0"
     },
     {
       "index": 2,
       "name": "oisd-small-auto-002",
       "cloudflare_list_id": "e74b7031-4a77-4aed-b975-fff7805d0b81",
       "item_count": 1000,
-      "chunk_hash": "663a070c98d1e9574fb2db326b1dae28692fee702a708458352633a1c8c25129"
+      "chunk_hash": "913f1c5037ef9a32bdae9cfc17a20d432c24d07074d05451a6bb479996f9c15b"
     },
     {
       "index": 3,
       "name": "oisd-small-auto-003",
       "cloudflare_list_id": "d8ba9f1b-a96e-4fa1-966c-d271a2a1eae7",
       "item_count": 1000,
-      "chunk_hash": "1824db475048feb897d8e45ba1bad57f71b4a7fec89a841620497c08bfd43f8d"
+      "chunk_hash": "0615e48feb6477b3a47d109983508abdd90fa4eeb20dfa2ba77c8992a1b9634d"
     },
     {
       "index": 4,
       "name": "oisd-small-auto-004",
       "cloudflare_list_id": "e437fd2e-a696-4fa5-aee4-92d9a13def8c",
       "item_count": 1000,
-      "chunk_hash": "5e91e54bed63730660abaacb4431d167ad35f88cb4534671f77748014e6cdf56"
+      "chunk_hash": "87f9c0a92eefba5945e9c4ebf5f008a4ff672510a30d48c3d538d19eff72f524"
     },
     {
       "index": 5,
       "name": "oisd-small-auto-005",
       "cloudflare_list_id": "5d2ad959-22c2-461c-bea8-92b6128960f2",
       "item_count": 1000,
-      "chunk_hash": "6794d42e33f213c5335764e8ddbfaf4bc0239bd29f8c3557b6076981d93d61cc"
+      "chunk_hash": "10208f84152d0885f2d92e145d4b7558ab5660afe440e692a7053cea8a9dbef5"
     },
     {
       "index": 6,
       "name": "oisd-small-auto-006",
       "cloudflare_list_id": "de783a8e-0627-48bb-8b97-2a6d91f83a62",
       "item_count": 1000,
-      "chunk_hash": "b33813a63cf5d97db85cff83a5f7bcfc706a473c86e628fe5e77a83619c8fb75"
+      "chunk_hash": "992a14193d395360e4639a692384bba1de880e92a519caf9f47c08435d766560"
     },
     {
       "index": 7,
       "name": "oisd-small-auto-007",
       "cloudflare_list_id": "09d7a637-72e4-44c3-9842-f15afc35988a",
       "item_count": 1000,
-      "chunk_hash": "4dadbcad84e187e469e4297f5a97fbb76398a0ff83051aa96510129cfdc1a896"
+      "chunk_hash": "ad08df3bee66561129f253d45e183ac6736a054740a58f5206eac2c16f9e98c8"
     },
     {
       "index": 8,
       "name": "oisd-small-auto-008",
       "cloudflare_list_id": "6eeb4fbc-d287-4648-b31d-343daedb6a6f",
       "item_count": 1000,
-      "chunk_hash": "017285da2b2bed1ab073bdca32288cbf18b6e7c08f915762a779f3e6e4e3d591"
+      "chunk_hash": "62aed1cff18db18cf24ba611fcdfe9f6b39b419ec3fe305d6efbcfd2427446cd"
     },
     {
       "index": 9,
       "name": "oisd-small-auto-009",
       "cloudflare_list_id": "0f524313-4de2-4b3a-8863-ff316d980e69",
       "item_count": 1000,
-      "chunk_hash": "6ed164e2a13c1333177548d696f31b392f9d6cd13c639f7df74d9153641857e2"
+      "chunk_hash": "b9a5bd22533c40bdabd40a27078f4e0aca4784c53ee3e12336f8bfad785e8185"
     },
     {
       "index": 10,
       "name": "oisd-small-auto-010",
       "cloudflare_list_id": "a2cb7f7a-92e8-4a0d-805a-5a6776db6b64",
       "item_count": 1000,
-      "chunk_hash": "5b4e76a1e66e0c3be6e3c9a317d56de0d464411fbd08d61b4f4c85db0c688007"
+      "chunk_hash": "28f38a4f9d0611f481a2d7a55e078958010be6b8ffd5b0ab0e8a4a7c9338489f"
     },
     {
       "index": 11,
       "name": "oisd-small-auto-011",
       "cloudflare_list_id": "5e3c060c-0b15-4753-87ef-5730375e4d84",
       "item_count": 1000,
-      "chunk_hash": "6eeb83d76f3682bc82b2bf63514566d7dd1a2286fa46c28122b14bee08ac242a"
+      "chunk_hash": "6a738c4ad9e0bbd13e5970d9c36e7b23d85dacbcb685ea1862e3d80f1d2ff281"
     },
     {
       "index": 12,
       "name": "oisd-small-auto-012",
       "cloudflare_list_id": "9f6d661a-746c-47f5-a79e-89246039e685",
       "item_count": 1000,
-      "chunk_hash": "a7c81139c4c6bc11a7975f9112cde3b484b1a7baf125092a4fad77d0e224aaeb"
+      "chunk_hash": "4d95786b54dc22558d2574181317498b024527fd2e5b36ae00ea43ad8d13d3ab"
     },
     {
       "index": 13,
       "name": "oisd-small-auto-013",
       "cloudflare_list_id": "fca1fe9d-ca68-4684-871b-57069bfb9456",
       "item_count": 1000,
-      "chunk_hash": "2a18e7f782188357abccafc9d72ad8bad85b9693fbf511576e06a11426c1a35d"
+      "chunk_hash": "89ec4a99cec85ab517c6ec688d2855b35da93c152db42293907af61279e47ec2"
     },
     {
       "index": 14,
       "name": "oisd-small-auto-014",
       "cloudflare_list_id": "1ae3d063-7cbd-4d66-a96e-26c926b93bc3",
       "item_count": 1000,
-      "chunk_hash": "cf93e9b77ac0a38c13cff0bf0994de66de5934f5591614a1d57deb40dc532c7e"
+      "chunk_hash": "daffeec6e388c783305260f5586dc9aaa371bd92d34bfe033e6212433943f80e"
     },
     {
       "index": 15,
       "name": "oisd-small-auto-015",
       "cloudflare_list_id": "701856cd-8b18-486f-a613-cc4ebe432dc7",
       "item_count": 1000,
-      "chunk_hash": "73e16b28fbf88f69c834f68a1423c074b05973d5f6e4a5aebda617afce69cfed"
+      "chunk_hash": "4f29033e79daf1f4eea096655c68a797b632339aec1b208aa835e57d8c92f70d"
     },
     {
       "index": 16,
       "name": "oisd-small-auto-016",
       "cloudflare_list_id": "0c2585f1-d923-4546-8b39-765c9399acd3",
       "item_count": 1000,
-      "chunk_hash": "c7bac33cf9c72639c52517f40da505741f7228b70e60bf2b9aa503432a3bec50"
+      "chunk_hash": "2affd077e4c64529ac6221470ef5e15caaad2c5bd0dcc5bcb0129dc3d14b5841"
     },
     {
       "index": 17,
       "name": "oisd-small-auto-017",
       "cloudflare_list_id": "0e355568-cdd2-41a9-b092-f123423a376f",
       "item_count": 1000,
-      "chunk_hash": "325b5d0beeef10e64bdf7049260a098f8200fbcac29a0d19e327b43f6d0e735a"
+      "chunk_hash": "1a287f4463b6ddd984f89f9d537d93461c52a8b34c1953e36d1727706daba10a"
     },
     {
       "index": 18,
       "name": "oisd-small-auto-018",
       "cloudflare_list_id": "2310c923-23bc-4c60-be01-0ece68806377",
       "item_count": 1000,
-      "chunk_hash": "0054d2168c57094836ddb81d4c1bad95a55069784e22198ed7a64482d78f923a"
+      "chunk_hash": "e59a4df8ec1c1d4e369bbdf296b9ca1ac0eb48cdf9ac6766cfd0a7f80d3aa8e4"
     },
     {
       "index": 19,
       "name": "oisd-small-auto-019",
       "cloudflare_list_id": "f6036eb3-44c1-4dd1-9d81-f64215b85e0a",
       "item_count": 1000,
-      "chunk_hash": "4b4639d303729957df00eeaa7ecc0ddcac4d0809a634dcd9a3fe6409ac44534d"
+      "chunk_hash": "2bbf4a9cd9ffaec57e816eb33d9b95d9f475c3c7264d51d6f86a1968aa43a662"
     },
     {
       "index": 20,
       "name": "oisd-small-auto-020",
       "cloudflare_list_id": "facd4236-8b7d-4a6c-bcc5-0df6d752fa31",
       "item_count": 1000,
-      "chunk_hash": "dbe4563d1de39a5bdff91eee6f6e1dcf9260c0d699bd50ebb194bb62446fa762"
+      "chunk_hash": "23c4e8b25b5a383a2cd98bb6945b8d52e9f276dddd6f03f57648e1012eab25d4"
     },
     {
       "index": 21,
       "name": "oisd-small-auto-021",
       "cloudflare_list_id": "01948675-e3c4-4e43-9507-6db59adcfb04",
       "item_count": 1000,
-      "chunk_hash": "0e1b73673fc158472537bd851a7ab62f4d6823dbda04e22968e2ff347a09a07c"
+      "chunk_hash": "4807061b7d9dfe4bb35b812cd6d87e1bea262578f810be4ad1d82c48a4cf04b3"
     },
     {
       "index": 22,
       "name": "oisd-small-auto-022",
       "cloudflare_list_id": "f79e6a8b-ace1-4c70-bb3c-6cbd838300eb",
       "item_count": 1000,
-      "chunk_hash": "7be45d7a2eb8043b2c8e7b6177eab659b7b62ea34e451643cc9a070d372dcef5"
+      "chunk_hash": "1a1d1cd230d661857467f6c8fadb1e4bb1777bd79582aa46f9f23cfae88fa846"
     },
     {
       "index": 23,
       "name": "oisd-small-auto-023",
       "cloudflare_list_id": "ff052ddc-4adf-4fc6-873a-cb34fc491ffe",
       "item_count": 1000,
-      "chunk_hash": "f612599e9963e6e6264a1a21caefedfe19b696e2ebfdb8546b3626f98e02749c"
+      "chunk_hash": "64f70e8d199ab1038f259c047e7d291a6c19964407d7a1fd4d7b7c29beb14b99"
     },
     {
       "index": 24,
       "name": "oisd-small-auto-024",
       "cloudflare_list_id": "e14d5e89-bd28-4b1c-a791-c54030a65833",
       "item_count": 1000,
-      "chunk_hash": "77d40fbfcaaaa1b4757cbba6710389f3b2721913ce2c80e668a42abca4168f34"
+      "chunk_hash": "dc46255f6bf493cdf4be245c60f66119a8bee0ef7b375acd51252b34cc1c0c76"
     },
     {
       "index": 25,
       "name": "oisd-small-auto-025",
       "cloudflare_list_id": "58b453f7-6df2-446d-84c1-4c65a205ccdd",
       "item_count": 1000,
-      "chunk_hash": "e28294ca37ccbb46b2add253a35ba209db5c4302797800d42f4cc424574743b7"
+      "chunk_hash": "37bf1bc29fd0a5664f8926fa251342d38c78961cc4485b0b8a32ac98d85508d0"
     },
     {
       "index": 26,
       "name": "oisd-small-auto-026",
       "cloudflare_list_id": "03259e50-46eb-4a3f-a121-6113847ea01b",
       "item_count": 1000,
-      "chunk_hash": "8b60fba2a98665c383c3ccd9be015fb555eefc4c329719aa99c9b39d1667c0af"
+      "chunk_hash": "86b5b595e3fc005b2c0fb5dca33ed847c154d8f1de52cc92b297406685729c35"
     },
     {
       "index": 27,
       "name": "oisd-small-auto-027",
       "cloudflare_list_id": "645f20bc-8ad0-41d5-b076-d53240dd6540",
       "item_count": 1000,
-      "chunk_hash": "3e41edbdedc40eba9b39496aecc0ca2e0e3df0e05e654d8226a1ba003f5ff30e"
+      "chunk_hash": "78d964c985a8a1a025e0b53652557f489ab389bb7a8265583b7b4f6b5368ea3c"
     },
     {
       "index": 28,
       "name": "oisd-small-auto-028",
       "cloudflare_list_id": "60a4eef3-8f28-4d39-ba54-092abe9500cf",
       "item_count": 1000,
-      "chunk_hash": "ddaba1599c653fcf5f32fe7870c31b4591c97b4fbb1be7de8bd6f11c8cec5052"
+      "chunk_hash": "62e5fe13e96ea920f0431351d00785552353039ca6ca7d259ec419ddd284e466"
     },
     {
       "index": 29,
       "name": "oisd-small-auto-029",
       "cloudflare_list_id": "a1e02f46-31b5-4f24-90b6-9212d6a2f9c8",
       "item_count": 1000,
-      "chunk_hash": "43f8bfa5aa5509deb2a606f1d9d8161afa937ecda04cef7234d90f4e81e9f3b1"
+      "chunk_hash": "4539ffcb86233ab0680919da39fefed0ddcdd1ab542df7a0e1b352adeebe74c6"
     },
     {
       "index": 30,
       "name": "oisd-small-auto-030",
       "cloudflare_list_id": "3ddc3a9a-256b-4cb1-99af-ac6f470967ca",
       "item_count": 1000,
-      "chunk_hash": "640eb70da182ffc1a9f2da3ff8a3aefcc44990ab8c1bf8cf6573514c6c2c5f7b"
+      "chunk_hash": "e30a6f029c6dcec57db7d8a718cface031e2d35466f68f594602461b0c6c7e56"
     },
     {
       "index": 31,
       "name": "oisd-small-auto-031",
       "cloudflare_list_id": "2d3bd56d-9f9e-42ed-b6f1-f8d101178d2a",
       "item_count": 1000,
-      "chunk_hash": "06da90c003ec8a586e0a0f4db5af82b156a7e488f4a0fd77e9706e4b1f739b27"
+      "chunk_hash": "2b90f32f7e9c27d77976a2ba3e5f0a7e11f7f2370e088ecfdd1afd530ed8bcf1"
     },
     {
       "index": 32,
       "name": "oisd-small-auto-032",
       "cloudflare_list_id": "01729f1c-680d-4c86-83eb-234a194292bc",
       "item_count": 1000,
-      "chunk_hash": "2674ba33d96830d0581cd3c22d1bcb3e54c44e8a2382f456ba8519909e8ef5f8"
+      "chunk_hash": "34890e7f0dd5c65fcf6efe6c4e7e599128c1330e18e36f58c4c39fdbdfc38de9"
     },
     {
       "index": 33,
       "name": "oisd-small-auto-033",
       "cloudflare_list_id": "ebe2499d-d86c-4c5c-86e2-bb6a752c719f",
       "item_count": 1000,
-      "chunk_hash": "fc082a1e2a342a4071cfdd7550487113dacac1fee4d6eb2d9c9ab53d3d65adc8"
+      "chunk_hash": "4bb1c7d5d390c1e160b20e7caa10cf5c7be09306831233032cfa8dcb0ac9a080"
     },
     {
       "index": 34,
       "name": "oisd-small-auto-034",
       "cloudflare_list_id": "b62e8ca1-7db7-4a7c-bad3-199f0e36c06c",
       "item_count": 1000,
-      "chunk_hash": "7237513286740ddbdbe598468fa955021816412d31bfe45b81791230f02ad4b1"
+      "chunk_hash": "f146fb9721f586904cac2c08b1637c100c7202f796040f6c206449068b8bcebc"
     },
     {
       "index": 35,
       "name": "oisd-small-auto-035",
       "cloudflare_list_id": "5cd9a3b8-e142-4c08-9dc7-bffdd4429883",
       "item_count": 1000,
-      "chunk_hash": "cbdeafab0f7b727f57fdb5894b022aba62c15ef5db45d98b57817176e70a1ea4"
+      "chunk_hash": "a3bf7f54415679476d8772cecd3b852536820a35f2e6757c4e5ddbabda3f3db3"
     },
     {
       "index": 36,
       "name": "oisd-small-auto-036",
       "cloudflare_list_id": "58a48c2a-3642-4c5d-b2d4-f0f4ac2a3bc6",
       "item_count": 1000,
-      "chunk_hash": "2e0c522cc6d42601cbb342e820e556a694aac820e5436f06ca28aecb57687682"
+      "chunk_hash": "c17fe316575f9a54d8b14193f951f1d1b6ada058cd61e59ac4c019c086cfeea1"
     },
     {
       "index": 37,
       "name": "oisd-small-auto-037",
       "cloudflare_list_id": "e745c771-2b70-423f-88e3-fb1364599e10",
       "item_count": 1000,
-      "chunk_hash": "781fab92886762ed830a14fa863c6053833354937c75eb0154ecf76ddfd63a49"
+      "chunk_hash": "cbe50c7d8449b86e4559b6c3c8baf0d8f3c9b7f091c70eaf5727aac43c5203fc"
     },
     {
       "index": 38,
       "name": "oisd-small-auto-038",
       "cloudflare_list_id": "8ec13ccb-0a3a-4b90-908d-26aeaa0c3390",
       "item_count": 1000,
-      "chunk_hash": "61c66f652fbb69389ff5ee00dce571dfa72c5e277b77fc5adc3af9d5a1471ae6"
+      "chunk_hash": "6ee54a0f8bbdcbafffffa05d566deb781ceaf30baa8efbd92ac6f746aefeb5a2"
     },
     {
       "index": 39,
       "name": "oisd-small-auto-039",
       "cloudflare_list_id": "3bfcbe9f-b722-4a8c-a87a-f58c352f2f39",
       "item_count": 1000,
-      "chunk_hash": "e7055146227da8f6ba14340c0b2bd9c10e64926cc59e8afacb6c139b4b67f0c6"
+      "chunk_hash": "d92db5269857cff3956056ad33d51433cc782da4f99d63a57fe0b002cbe135ef"
     },
     {
       "index": 40,
       "name": "oisd-small-auto-040",
       "cloudflare_list_id": "36c7302f-f215-4489-8e9f-ce856e0f05ea",
       "item_count": 1000,
-      "chunk_hash": "553adee672c8dca794f06c85719e0fa41179597fd0c093e47d4e4ec7eccca117"
+      "chunk_hash": "73687db5005b9594ff9f189c60435611239640ae98c6e55d8f6c21b06529ad5f"
     },
     {
       "index": 41,
       "name": "oisd-small-auto-041",
       "cloudflare_list_id": "77d906ca-5054-49c1-8b6d-db728ce4b1b2",
       "item_count": 1000,
-      "chunk_hash": "47762c358c45d5bb97f8bcf67dc36becc026709460a21337460d7e03a7d28670"
+      "chunk_hash": "623c57e9597fa4b377de51f7d60f716c7c7842e9c42a1e3fbb0539f3bf0a86fb"
     },
     {
       "index": 42,
       "name": "oisd-small-auto-042",
       "cloudflare_list_id": "5f994cdb-c133-49c9-87a4-3a58e04f4701",
       "item_count": 1000,
-      "chunk_hash": "9dd72e4fea9907ed56e5cec710dc91144afa7d942445ba97d636e3ca642f85b8"
+      "chunk_hash": "c35c77ee6e0b4f3a0661ca7e0fd45ac86e12d99a1c8a01e1646ccf0c80d515c4"
     },
     {
       "index": 43,
       "name": "oisd-small-auto-043",
       "cloudflare_list_id": "85618770-9572-4e96-a591-ff1dff70b741",
       "item_count": 1000,
-      "chunk_hash": "04a2df85d95658bf058a03ee4d64850157263db244cbd9f242d5ce304f60d489"
+      "chunk_hash": "284dd404f38152aec0f32aa7d9f855a5d698961fd1c47a7733e6032c2eff43e5"
     },
     {
       "index": 44,
       "name": "oisd-small-auto-044",
       "cloudflare_list_id": "10e661e9-7673-4cb1-8592-b9441a5ba6f3",
       "item_count": 1000,
-      "chunk_hash": "5661eb8137700e70e3ef470f923bda7fa1108f6f489d1bb17b06acc2435b8c49"
+      "chunk_hash": "027afa603402e41d09d4b11711c35a60b14a49ddf0b4cf36e71099a321c71483"
     },
     {
       "index": 45,
       "name": "oisd-small-auto-045",
       "cloudflare_list_id": "36ce173e-4b38-4df9-9a12-fa2047d3fd2f",
       "item_count": 1000,
-      "chunk_hash": "106a31485bbb671ef41aa5af9a4ae1d21c206267a46d6647281e5d1d76947491"
+      "chunk_hash": "f2dc56a82bdfd55256de2328bf5538673e1d36cd89761c611e4fb9bd0e779b56"
     },
     {
       "index": 46,
       "name": "oisd-small-auto-046",
       "cloudflare_list_id": "806a9cea-41ef-470c-83c1-04cc8cc3ba36",
       "item_count": 1000,
-      "chunk_hash": "4e175aec4e658914d0d12c658f144ec3988f123c73deb21b153f589bd5f69daf"
+      "chunk_hash": "9fb8bfa103935ea7aa09ccbae14cc7ea6df26e5d48ba4f4b2a06536ad26eb0fc"
     },
     {
       "index": 47,
       "name": "oisd-small-auto-047",
       "cloudflare_list_id": "c3c1262d-e575-4a28-9c84-da1e3af85e4f",
       "item_count": 1000,
-      "chunk_hash": "9d08814890ec68e53d9fadea714b33cb17767022801e1a74df001859116b54c9"
+      "chunk_hash": "2c662aa79f44e91b1d872e2d866855eee890ad277e16038e7e8d081e72eef551"
     },
     {
       "index": 48,
       "name": "oisd-small-auto-048",
       "cloudflare_list_id": "2a169aef-1d41-4410-a0ec-eefed273ea84",
       "item_count": 1000,
-      "chunk_hash": "f3aa142d6055e20155aec3bb9ed3de5462b21bec22eb1f04949efd71c7936310"
+      "chunk_hash": "42fbb1987774e39eb35cc8ab359475e3a504d87f264eb6a4e22f6f0fbdbf097a"
     },
     {
       "index": 49,
       "name": "oisd-small-auto-049",
       "cloudflare_list_id": "300bd724-f491-46f1-aa24-ba44d2c49cbc",
       "item_count": 1000,
-      "chunk_hash": "7afd2f03d7f4dad704b1460d8836aafc35e21bd3cf82ffcfd519d7d462efbd53"
+      "chunk_hash": "bf6ba9333320398d4ad829fe4cf7521f6fd096853bea121b50f9a5eea8dd24ee"
     },
     {
       "index": 50,
       "name": "oisd-small-auto-050",
       "cloudflare_list_id": "c07c1a32-5e2c-46bd-9f2f-f018d6eac6c5",
       "item_count": 1000,
-      "chunk_hash": "bf30b8ce936fc1871ce69298623e12029fd2bf775154f67f83dc2397c2d53ad3"
+      "chunk_hash": "b87161810e100a590f9e0c5f7814530125e1137225aca05c1e3314ca3a4736d1"
     },
     {
       "index": 51,
       "name": "oisd-small-auto-051",
       "cloudflare_list_id": "ad380d76-8b00-4b79-8169-5ec12d432bd4",
       "item_count": 1000,
-      "chunk_hash": "377920f489c20401b6a73a99d8afc4014ed6eb4594190b92badaf264b6b59d30"
+      "chunk_hash": "6b0f694dd0943f8cb5ed8de8afc8bd4b4c7223c37839ea5f85fce5f2b2b99494"
     },
     {
       "index": 52,
       "name": "oisd-small-auto-052",
       "cloudflare_list_id": "5964da63-b363-44be-8ddf-77a76e377494",
       "item_count": 1000,
-      "chunk_hash": "b78229415cee79b5c3af4e33d0567d809faaf30117056d64ee04e90a4e672fc0"
+      "chunk_hash": "13500fffae42adbe95fb0e30f575309a196f3b208e37c9a86f4f6336f6ed2f30"
     },
     {
       "index": 53,
       "name": "oisd-small-auto-053",
       "cloudflare_list_id": "d3c0b071-88f1-417a-a510-0649e7827396",
       "item_count": 1000,
-      "chunk_hash": "cfaf89f8b99ca398828c2abce10b22971b9c11bd98eda05480e12e9d993eae23"
+      "chunk_hash": "6219227076bf12795ee73a8ef5deeee3893093ada91893d38bf298f4a287823c"
     },
     {
       "index": 54,
       "name": "oisd-small-auto-054",
       "cloudflare_list_id": "8129d2d0-e44a-4201-a434-0447d67555f7",
       "item_count": 1000,
-      "chunk_hash": "8983374bee55392378f8d84b27ee7bb57bd6e02b0a1c74bfe6d28f7eab8983ea"
+      "chunk_hash": "c28853bc9793a1527d410cd3dd11d188f9594b3ee9d54e8e7eedb139019c0f83"
     },
     {
       "index": 55,
       "name": "oisd-small-auto-055",
       "cloudflare_list_id": "5c2d5da7-e014-4a20-9f26-895222cc8181",
       "item_count": 1000,
-      "chunk_hash": "bdd6cc482a1d12430e0327e004df0664651c4cb9d62f1801349393f75d375629"
+      "chunk_hash": "abe365f305d1480af5e8bc411fa76a174ff8e8f64106d3f0953ad2156ff75f55"
     },
     {
       "index": 56,
       "name": "oisd-small-auto-056",
       "cloudflare_list_id": "1ed19a27-ec3e-4180-9d50-282ce63a132f",
       "item_count": 1000,
-      "chunk_hash": "d0dc63d03b686ad7950afa347a4459b2927549b5bacbede7233ca7d698be3a6e"
+      "chunk_hash": "c75d407104bd82e9f986cdddc2cd767b565d8c901b81e28d84323b7e9c4a2238"
     },
     {
       "index": 57,
       "name": "oisd-small-auto-057",
       "cloudflare_list_id": "9f37c0da-960b-4353-a53f-643a6675a088",
       "item_count": 1000,
-      "chunk_hash": "d967efed8992e34e039ddbbc5873e1170100dbc9d25fc46342c1e44228817d78"
+      "chunk_hash": "f4754d538705f0e2ef28110016eb3f2b8a4ceb487bbe89b05adfb5d745d53ac8"
     },
     {
       "index": 58,
       "name": "oisd-small-auto-058",
       "cloudflare_list_id": "5be7d5d0-b5a9-4f27-acab-f85232751057",
       "item_count": 1000,
-      "chunk_hash": "98c476163d7a693a61da355e33479c2fd34e83caf08fb9275043af3efc03adb9"
+      "chunk_hash": "048c3dc9abbb18f20da951bfe973172e74c4a55fecab44363830e87cc10bd9dc"
     },
     {
       "index": 59,
       "name": "oisd-small-auto-059",
       "cloudflare_list_id": "b8a98c3a-86ba-4e3a-bb60-df0d4340c6ea",
-      "item_count": 668,
-      "chunk_hash": "752c7079775f8e6208d13eeb1d313977342cc145ba2f5ffe5cf2560e85958aae"
+      "item_count": 873,
+      "chunk_hash": "9490fdc482037282ee8ead81bf42f2ab3be650a6b41e468173963456eb0c15ac"
     }
   ],
   "rule": {
