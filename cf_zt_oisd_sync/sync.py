@@ -292,6 +292,7 @@ def update_sync(config: Config, progress: ProgressCallback | None = None) -> App
         if progress:
             progress("lists", done_list_ops, total_list_ops)
 
+        # Stage 1: Create and update active lists
         with ThreadPoolExecutor(max_workers=config.list_workers) as executor:
             for i, name, chunk, chash, prev, desc in prepared_chunks:
                 if prev is None:
@@ -311,20 +312,17 @@ def update_sync(config: Config, progress: ProgressCallback | None = None) -> App
                 else:
                     list_results[i] = prev.cloudflare_list_id
 
-            for extra in extras:
-                future = executor.submit(cf.delete_gateway_list, extra.cloudflare_list_id)
-                list_futures[future] = ("delete", extra.index, extra.cloudflare_list_id)
-
-            for future in as_completed(list_futures):
-                operation, index, existing_id = list_futures[future]
-                result = future.result()
-                if operation == "create":
-                    list_results[index] = result.get("id", f"dry-run-{index}")
-                elif operation == "update":
-                    list_results[index] = str(existing_id)
-                done_list_ops += 1
-                if progress:
-                    progress("lists", done_list_ops, total_list_ops)
+            if list_futures:
+                for future in as_completed(list_futures):
+                    operation, index, existing_id = list_futures[future]
+                    result = future.result()
+                    if operation == "create":
+                        list_results[index] = result.get("id", f"dry-run-{index}")
+                    elif operation == "update":
+                        list_results[index] = str(existing_id)
+                    done_list_ops += 1
+                    if progress:
+                        progress("lists", done_list_ops, total_list_ops)
 
         new_chunks: list[ChunkState] = []
         list_ids: list[str] = []
@@ -335,6 +333,7 @@ def update_sync(config: Config, progress: ProgressCallback | None = None) -> App
             )
             list_ids.append(lid)
 
+        # Stage 2: Update the Gateway Rule to use only active list IDs (removing references to extra lists)
         if progress:
             progress("rule", 0, 1)
         previous_list_ids = [chunk.cloudflare_list_id for chunk in sorted(current.chunks, key=lambda chunk: chunk.index)]
@@ -356,6 +355,20 @@ def update_sync(config: Config, progress: ProgressCallback | None = None) -> App
             rule = RuleState(name=config.rule_name, cloudflare_rule_id=rid, precedence=config.rule_precedence)
         if progress:
             progress("rule", 1, 1)
+
+        # Stage 3: Delete extra lists (safe to delete now because the Gateway Rule no longer references them)
+        if extras:
+            delete_futures = {}
+            with ThreadPoolExecutor(max_workers=config.list_workers) as executor:
+                for extra in extras:
+                    future = executor.submit(cf.delete_gateway_list, extra.cloudflare_list_id)
+                    delete_futures[future] = extra.cloudflare_list_id
+
+                for future in as_completed(delete_futures):
+                    future.result()
+                    done_list_ops += 1
+                    if progress:
+                        progress("lists", done_list_ops, total_list_ops)
 
         new_state = replace(current)
         new_state.source_hash = source_hash
